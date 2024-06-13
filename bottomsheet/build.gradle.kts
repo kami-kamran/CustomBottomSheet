@@ -73,7 +73,7 @@ afterEvaluate {
 
                 groupId = "com.github.kami-kamran"
                 artifactId = "custom-bottom-sheet"
-                version = "0.0.3"
+                version = "0.0.4"
             }
         }
     }
