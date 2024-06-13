@@ -49,7 +49,7 @@ android {
                     from (components["release"])
                     groupId = "com.github.kami-kamran"
                     artifactId = "custom-bottom-sheet"
-                    version = "0.0.1"
+                    version = "0.0.2"
                     artifact("${layout.buildDirectory}/outputs/aar/custom-bottom-sheet-release.aar")
                 }
             }
