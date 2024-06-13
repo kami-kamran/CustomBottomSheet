@@ -42,20 +42,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-    afterEvaluate {
-        publishing {
-            publications {
-                create<MavenPublication>("maven") {
-                    from (components["release"])
-                    groupId = "com.github.kami-kamran"
-                    artifactId = "custom-bottom-sheet"
-                    version = "0.0.2"
-                    artifact("${layout.buildDirectory}/outputs/aar/custom-bottom-sheet-release.aar")
-                }
-            }
-        }
 
-    }
 }
 
 dependencies {
@@ -77,4 +64,17 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.coil)
+}
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.github.kami-kamran"
+                artifactId = "custom-bottom-sheet"
+                version = "0.0.3"
+            }
+        }
+    }
 }
